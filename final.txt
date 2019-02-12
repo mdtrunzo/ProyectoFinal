@@ -1,0 +1,45 @@
+users{
+  id,
+  email,
+  password,
+  firebase_id (VARCHAR 100 NULL),
+  created_at,
+  updated_at,
+  deleted_at
+}
+
+pins{
+  id,
+  user_id,
+  url,
+  created_at,
+  updated_at,
+  deleted_at,
+}
+
+tag {
+  id,
+  name
+}
+
+pins_tags{
+  id,
+  tag_id,
+  pin_id
+}
+
+votes{
+  id,
+  pin_id,
+  user_id,
+}
+
+
+
+Tag 
+    search(name)
+
+Pin 
+   detail (id)
+   create(url)
+   vote(pin,user)
